@@ -7,9 +7,11 @@ import G6Study from '@/components/tool/G6Study'
 import EchartQuestion from '@/components/question/EchartQuestion'
 import CSSQuestion from '@/components/question/CSSQuestion'
 import HtmlQuestion from '@/components/question/HtmlQuestion'
+import ArborKnowledge from '@/components/knowledge/ArborKnowledge'
 import RequireKnowledge from '@/components/knowledge/RequireKnowledge'
 import CanvasKnowledge from '@/components/knowledge/CanvasKnowledge'
 import Css3Knowledge from '@/components/knowledge/Css3Knowledge'
+import BaiMapKnowledge from '@/components/knowledge/BaiMapKnowledge'
 import NgGridKnowledge from '@/components/knowledge/NgGridKnowledge'
 import RelationEm from '@/components/example/RelationEm'
 import StarEm from '@/components/example/StarEm'
@@ -55,6 +57,16 @@ export default new Router({
           component: HtmlQuestion
         },
         {
+          path: '/ArborKnowledge',
+          name: 'ArborKnowledge',
+          component: ArborKnowledge
+        },
+        {
+          path: '/BaiMapKnowledge',
+          name: 'BaiMapKnowledge',
+          component: BaiMapKnowledge
+        },
+        {
           path: '/RequireKnowledge',
           name: 'RequireKnowledge',
           component: RequireKnowledge
@@ -64,6 +76,7 @@ export default new Router({
           name: 'CanvasKnowledge',
           component: CanvasKnowledge
         },
+        
         {
           path: '/Css3Knowledge',
           name: 'Css3Knowledge',

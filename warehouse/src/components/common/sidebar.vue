@@ -17,6 +17,8 @@
           </el-submenu>
           <el-submenu index="3">
             <template slot="title"><i class="el-icon-setting"></i>学习新知识</template>
+              <el-menu-item index="ArborKnowledge">ARBOR</el-menu-item>
+              <el-menu-item index="BaiMapKnowledge">百度地图</el-menu-item>
               <el-menu-item index="RequireKnowledge">require</el-menu-item>
               <el-menu-item index="CanvasKnowledge">canvas</el-menu-item>
               <el-menu-item index="Css3Knowledge">css3</el-menu-item>

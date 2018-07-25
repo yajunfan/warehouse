@@ -29,5 +29,9 @@ body,html{
   color: #2c3e50;
   height: 100%;
 }
+canvas{
+  position: absolute;
+  left: 160px;
+}
 
 </style>
