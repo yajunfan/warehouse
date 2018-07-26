@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Login from '@/components/login'
 import Home from '@/components/common/home'
 import EchartStudy from '@/components/tool/EchartStudy'
 import D3Study from '@/components/tool/D3Study'
@@ -7,6 +8,7 @@ import G6Study from '@/components/tool/G6Study'
 import EchartQuestion from '@/components/question/EchartQuestion'
 import CSSQuestion from '@/components/question/CSSQuestion'
 import HtmlQuestion from '@/components/question/HtmlQuestion'
+import VueQuestion from '@/components/question/VueQuestion'
 import ArborKnowledge from '@/components/knowledge/ArborKnowledge'
 import RequireKnowledge from '@/components/knowledge/RequireKnowledge'
 import CanvasKnowledge from '@/components/knowledge/CanvasKnowledge'
@@ -16,16 +18,27 @@ import NgGridKnowledge from '@/components/knowledge/NgGridKnowledge'
 import RelationEm from '@/components/example/RelationEm'
 import StarEm from '@/components/example/StarEm'
 import FlowChartEm from '@/components/example/FlowChartEm'
+import Interview from '@/components/interview/Interview'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+   {
+     path: '/',
+     name: 'Login',
+     component: Login
+    },
     {
-      path: '/',
+      path: '/Home',
       name: 'Home',
       component: Home,
       children:[
+        {
+          path: '/',
+          name: 'EchartStudy',
+          component: EchartStudy
+        },
         {
           path: '/EchartStudy',
           name: 'EchartStudy',
@@ -55,6 +68,11 @@ export default new Router({
           path: '/HtmlQuestion',
           name: 'HtmlQuestion',
           component: HtmlQuestion
+        },
+        {
+          path: '/VueQuestion',
+          name: 'VueQuestion',
+          component: VueQuestion
         },
         {
           path: '/ArborKnowledge',
@@ -87,6 +105,7 @@ export default new Router({
           name: 'NgGridKnowledge',
           component: NgGridKnowledge
         },
+        
         {
           path: '/RelationEm',
           name: 'RelationEm',
@@ -101,6 +120,11 @@ export default new Router({
           path: '/FlowChartEm',
           name: 'FlowChartEm',
           component: FlowChartEm
+        },
+        {
+          path: '/Interview',
+          name: 'Interview',
+          component: Interview
         }
       ]
     },
