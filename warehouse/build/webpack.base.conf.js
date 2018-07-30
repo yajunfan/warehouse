@@ -46,7 +46,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+          name: utils.assetsPath('img/[name].[hash:7].[ext]') //打包之后创建一个目录，img。这里进行设置打包之后图片的路径
         }
       },
       {

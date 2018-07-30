@@ -18,7 +18,9 @@ import NgGridKnowledge from '@/components/knowledge/NgGridKnowledge'
 import RelationEm from '@/components/example/RelationEm'
 import StarEm from '@/components/example/StarEm'
 import FlowChartEm from '@/components/example/FlowChartEm'
-import Interview from '@/components/interview/Interview'
+import MobileInterview from '@/components/interview/MobileInterview'
+import FEInterview from '@/components/interview/FEInterview'
+import FrameworkInterview from '@/components/interview/FrameworkInterview'
 
 Vue.use(Router)
 
@@ -122,10 +124,21 @@ export default new Router({
           component: FlowChartEm
         },
         {
-          path: '/Interview',
-          name: 'Interview',
-          component: Interview
-        }
+          path: '/MobileInterview',
+          name: 'MobileInterview',
+          component: MobileInterview
+        },
+        {
+          path: '/FEInterview',
+          name: 'FEInterview',
+          component: FEInterview
+        },
+        {
+          path: '/FrameworkInterview',
+          name: 'FrameworkInterview',
+          component: FrameworkInterview
+        },
+        
       ]
     },
    

@@ -20,7 +20,7 @@
        activeNames: ['1'],
        lists:[
          {
-           title:"移动端实现简单的下拉刷新？",
+           title:"由于版本的不同",
            content1:'1.2之前的引用<br>'+
            '(script) src=‘http://api.map.baidu.com/api?key=46ce9d0614bf7aefe0ba562f8cf87194&v=1.0&services=false’ (/script)<br>',
            content2:'2.0的版本引用 <br>'+ 
@@ -179,6 +179,7 @@
 </script>
 
 <style scoped>
+@import '../../../static/css/common/test.css';
 .Map_container{
 
 }

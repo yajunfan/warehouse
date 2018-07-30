@@ -1,6 +1,6 @@
 <template>
   <div class="index_container">
-    <v-head></v-head>
+    <myhead></myhead>
     <v-sidebar></v-sidebar>
     <div class="content">
         <transition name="move" mode="out-in"><router-view></router-view></transition>
@@ -13,7 +13,8 @@ import vHead from './header.vue';
 import vSidebar from './sidebar.vue';
 export default {
   components:{
-    vHead, vSidebar
+    myhead:vHead, 
+    vSidebar:vSidebar
   }
 }
 </script>

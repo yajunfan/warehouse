@@ -34,9 +34,9 @@
           </el-submenu>
           <el-submenu index="5">
             <template slot="title"><i class="el-icon-setting"></i>基础知识回顾</template>
-              <el-menu-item index="Interview">移动端知识</el-menu-item>
-              <el-menu-item index="Interview">前端基础</el-menu-item>
-              <el-menu-item index="Interview">框架问题</el-menu-item>
+              <el-menu-item index="MobileInterview">移动端知识</el-menu-item>
+              <el-menu-item index="FEInterview">前端基础</el-menu-item>
+              <el-menu-item index="FrameworkInterview">框架问题</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
@@ -49,7 +49,7 @@ export default {
   name: 'App',
   computed:{
     onRoutes(){
-      return this.$route.path.replace('/','');
+      return this.$route.path.replace('/EchartStudy','');
     }
   }
 }
