@@ -12,6 +12,7 @@ function resolve (dir) {
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
+  //devtool:'eval-source-map',
   entry: {
     app: './src/main.js'
   },
@@ -46,7 +47,8 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]') //打包之后创建一个目录，img。这里进行设置打包之后图片的路径
+          //打包之后创建一个目录，img。这里进行设置打包之后图片的路径
+          name: utils.assetsPath('img/[name].[hash:7].[ext]') 
         }
       },
       {
@@ -64,7 +66,11 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      // {
+      //   test: /\.(htm|html)$/i,
+      //   use:['html-withimg-loader']
+      // }
     ]
   },
   node: {

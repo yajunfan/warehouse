@@ -64,7 +64,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         to: config.dev.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    // new PurifyCSSPlugin({
+    //   //进行一个同时搜索
+    //   paths:glob.sync(path.join(__dirname, 'src/*.html'))
+    // })
   ]
 })
 

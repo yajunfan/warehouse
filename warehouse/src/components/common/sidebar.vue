@@ -24,7 +24,7 @@
               <el-menu-item index="CanvasKnowledge">canvas</el-menu-item>
               <el-menu-item index="Css3Knowledge">css3</el-menu-item>
               <el-menu-item index="NgGridKnowledge">ng-grid</el-menu-item>
-              
+              <el-menu-item index="WebpackKnowledge">webpack学习</el-menu-item>
           </el-submenu>
            <el-submenu index="4">
             <template slot="title"><i class="el-icon-setting"></i>案例</template>

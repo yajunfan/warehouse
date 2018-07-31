@@ -170,61 +170,10 @@ export default {
           '<br>在methods中...mapMutations(["changeNum","changeNum"])<br>然后，比如当num在某一个函数中发生变化了，就执行changeNum(num);其他页面就可以得到更新'
         },
         {
-          name: '关于package.json的安装', 
-          question: '不一定全部安装',
-          answer:'当执行npm install的时候，会发现有的包并没有下载安装，是因为有的已经存在我们全局（计算机中）了，他会直接拷贝计算机的镜像过来，'+
-          '不会再去下载其他版本，所以使用webpack 的时候，不建议全局安装webpack，webpack会镜像，就必须依赖与这个版本，如果版本进行了更新'+
-          '没办法进行更新的，除非全局的进行更新，这样不适用于项目的开发，在项目中，同时维护很多项目是很累的'
-        },
-        {
-          name: 'webpack', 
-          question: 'webpack安装',
-          answer:'webpack安装的时候不建议进行全局安装，因为项目构建的时候可能需要的webpack的版本比较高，然后我们会在当前目录下安装高版本的webpack，'+
-          '但是我们全局安装的版本较低，这时候项目会默认的寻找全局安装下的webpack，那么项目构建就会出现问题，一般就在自己的目录下进行安装webpack就好'
-        },
-        {
-          name: '--save-dev', 
-          question: 'webpack安装',
-          answer:'一般安装依赖包的时候，我们会输入--save-dev，那么 --save的意思就是相当于这个项目中安装，然后-dev呢，表示在开发环境中出现，在以后'+
-          '的生产环境中不需要用户下载，需要用户在打开页面的时候使用的就不写这个-dev<br>,'
-        },
-        {
-          name: 'webpack安装的报错', 
-          question: 'webpack安装的报错的原因',
-          answer:'如果在安装webpack的时候，出现了错误，爆红，那么要从几个方面查找原因<br>1）查看node的版本是否太低'+
-          '<br>2）如果node版本已经够高，那么久可能是网络问题，那么建议使用cnpm来进行安装https://npm.taobao.org '+ 
-          '<br>3）可能是权限的问题，比如linux和mac等'
-        },
-        {
-          name: '在新项目和旧项目中如何给webpack升级', 
-          question: '在新项目和旧项目中如何给webpack升级',
-          answer:'如果在新项目中，直接将node_module删除，然后重新安装就可以了，如果在旧项目中的话，需要手动在'+
-          'package.json中更改webpack或者其他的依赖包的版本号，然后将node_module删除，再次重新安装就可以。'
-        },
-        {
-          name: '在入口文件中引入其他的文件时，需要使用相对路径，不能使用绝对路径', 
-          question: '在入口文件中引入其他的文件时，需要使用相对路径，不能使用绝对路径',
-          answer:'在入口文件中引入其他的文件时，需要使用相对路径，不能使用绝对路径'
-        },
-        {
-          name: '使用webpack，npm install', 
-          question: '使用webpack，npm install 的一些注意点',
-          answer:'比如，我们要安装jquery，如果直接输入npm install jquery的话，那么是不会出现在package.json中的，这只是将这个一拉装在本地'+
-          '<br>,如果使用npm install jquery --save的话，那么会出现在package.json中的dependencies，这里放的就是我们生产环境中需要使用的'+
-          '<br>如果使用npm install jquery --save-dev，就会出现在package.json中的devDependencies，表示在开发环境中也会需要这个包'+
-          '<br>如果只想安装生成环境下的包，dependencies中的。使用npm install --production'
-        },
-        {
-          name: '在webpack.base.config.js中，打印', 
-          question: '在哪里可以看到打印结果',
-          answer:'直接打印，打印是在终端看的，但是需要进行一下转码，比如encodeURIComponent(process.env.type)'
-        },
-        {
-          name: '局部安装webpack', 
-          question: '在项目中安装了webpack的时候，不是全局安装的话，直接使用webpack，报错，webpack命令找不到',
-          answer:'这是因为，局部安装webpack的话，会安装在node_module下，那么直接照这个命令就找不大，这时候我们需要在package.json中'+
-          '增加一个命令，在script中增加一个属性，比如build：“webpack”，在重点输入npm run build 的话，可以了，因为package.json会自己去'+
-          'node_module中找webpack，就可以了'
+          name: '启动npm run dev的时候，报错', 
+          question: '启动npm run dev的时候，报错，Failed to compile with 1 errors ，实际上在控制台是没有报错信息的，什么原因',
+          answer:'一般这种错误是由丢失了文件，或者编译的时候找不到文件导致的，这时候，去查看为wbpack中的配置，看index.html的位置是否正确，'+
+          '我出现的原因是我在webpack中进行了配置，后缀是html的文件需要使用loader导致的，删除了就可以了'
         },
       ],
     }

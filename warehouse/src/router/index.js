@@ -15,6 +15,7 @@ import CanvasKnowledge from '@/components/knowledge/CanvasKnowledge'
 import Css3Knowledge from '@/components/knowledge/Css3Knowledge'
 import BaiMapKnowledge from '@/components/knowledge/BaiMapKnowledge'
 import NgGridKnowledge from '@/components/knowledge/NgGridKnowledge'
+import WebpackKnowledge from '@/components/knowledge/WebpackKnowledge'
 import RelationEm from '@/components/example/RelationEm'
 import StarEm from '@/components/example/StarEm'
 import FlowChartEm from '@/components/example/FlowChartEm'
@@ -107,7 +108,11 @@ export default new Router({
           name: 'NgGridKnowledge',
           component: NgGridKnowledge
         },
-        
+        {
+          path: '/WebpackKnowledge',
+          name: 'WebpackKnowledge',
+          component: WebpackKnowledge
+        },
         {
           path: '/RelationEm',
           name: 'RelationEm',
