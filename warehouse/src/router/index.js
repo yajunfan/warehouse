@@ -16,12 +16,14 @@ import Css3Knowledge from '@/components/knowledge/Css3Knowledge'
 import BaiMapKnowledge from '@/components/knowledge/BaiMapKnowledge'
 import NgGridKnowledge from '@/components/knowledge/NgGridKnowledge'
 import WebpackKnowledge from '@/components/knowledge/WebpackKnowledge'
+import i18nKnowledge from '@/components/knowledge/i18nKnowledge'
 import RelationEm from '@/components/example/RelationEm'
 import StarEm from '@/components/example/StarEm'
 import FlowChartEm from '@/components/example/FlowChartEm'
 import MobileInterview from '@/components/interview/MobileInterview'
 import FEInterview from '@/components/interview/FEInterview'
 import FrameworkInterview from '@/components/interview/FrameworkInterview'
+
 
 Vue.use(Router)
 
@@ -86,6 +88,11 @@ export default new Router({
           path: '/Home/BaiMapKnowledge',
           name: 'BaiMapKnowledge',
           component: BaiMapKnowledge
+        },
+        {
+          path: '/Home/i18nKnowledge',
+          name: 'i18nKnowledge',
+          component: i18nKnowledge
         },
         {
           path: '/Home/RequireKnowledge',
