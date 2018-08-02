@@ -10,11 +10,16 @@
         <div v-html="item.content3"></div>
       </el-collapse-item>
     </el-collapse>
+    <progressRange :percentage='60' v-on:AAA="showinfo"></progressRange>
   </div>
 </template>
 
 <script>
+import progressRange from "../common/progress";
  export default {
+   components: {
+    progressRange: progressRange
+  },
    data(){
      return{
        activeNames: ['1'],
@@ -173,6 +178,12 @@
            
          },
        ]
+     }
+   },
+   methods:{
+     showinfo(data){
+       console.log(data)
+       alert(data)
      }
    }     
  }

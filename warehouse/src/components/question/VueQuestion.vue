@@ -125,6 +125,14 @@ export default {
           '例如：<div class="prompt" :style="{‘opacity’:loginFlag ? ‘0’:‘1’}">请填写用户名或密码</div>loginflag在事件中进行true或者false的变换,'
         },
         {
+          name: 'vue使用axios请求，进行跨域', 
+          question: '怎么处理',
+          answer:'一般来说，我们使用axios的时候，都要设置axios.defaults.withCredentials=true;，就可以允许跨域携带cookie信息了，但是axios使用中'+
+          '要求后台Access-Control-Allow-Origin这个不可以设置为*，意思就是不能够任意网址都可以进行请求，那么就需要后台的对这个Access-Control-Allow-Origin'+
+          '进行一个设置，配置指定的地址，根据从我发出的header（请求头）中获取host的地址，设置为Access-Control-Allow-Origin的值，这就就实现了跨域'+
+          '对照片进行上传的时候，发现使用axios不成功，最后使用了ajax进行请求的，不知道出错点在哪里，始终不执行'
+        },
+        {
           name: '根据路由进行不同的请求，进行不同的操作，怎么设置', 
           question: '刚开始想的是使用window.location.hash，觉得不是那么稳妥，然后想要使用$route.name来判断，结果发现{{$route.name}}在js页面是不可以使用的，'+
           '在.vue组件页面是可以使用的；在js页面必须使用this.$route.name。前提是找到这个this指的是vue这个对象。最后，选择了使用config.Url的方式',
@@ -145,6 +153,13 @@ export default {
           answer:'<router-link :to="{path:‘/EditAddmodel’（跳转路由）,query: {name: item.name}}"><i class="iconfont icon-edit"  title="编辑cube"></i></router-link> '
         },
         {
+          name: '$set原理', 
+          question: '为什么vue不能检测到数组和对象的变化',
+          answer:'vue在构造函数new Vue()时，就通过Object.defineProperty中的getter和setter这两个方法，完成对数据的绑定'+
+          '所以直接通过修改arr[1] = 0,这种方式，无法触发getter和setter方法，所以无法直接修改触发vue中的视图的更新，必须还得通过ObjectProperty的方法去改变'+
+          '$Vue就是封装了js底层的Object。defineProperty方法'
+        },
+        {
           name: '$set的使用', 
           question: '当script的数据已经得到更新，但是页面中不发生变化的时候，',
           answer:'如果在实例创建之后添加新的属性到实例上，它不会触发视图更新,this_.$set(data,index,data[index]);'
@@ -156,8 +171,9 @@ export default {
         },
         {
           name: '数据组件之间的传递', 
-          question: '在A页面有一个公共部分header页面，操作这个header忠的数据，怎么可以影响到其他的页面，使其他页面数据也得到更新',
-          answer:'进行路由的实时监控，前提是使用了vue-router；<br>methods:{indexListFn（）{}}<br>'+
+          question: '在A页面有一个公共部分header页面，操作这个header中的数据，怎么可以影响到其他的页面，使其他页面数据也得到更新或者是在其他的页面进行'+
+          '操作该公共数据，使这个数据看起来像是和每个页面都有关系的联动',
+          answer:'在header页面进行路由的实时监控，前提是使用了vue-router；<br>methods:{indexListFn（）{请求数据等}}<br>'+
           'watch:{"$route": "indexListFn"  想要更新的数据函数}'
         },
         {
@@ -175,6 +191,16 @@ export default {
           answer:'一般这种错误是由丢失了文件，或者编译的时候找不到文件导致的，这时候，去查看为wbpack中的配置，看index.html的位置是否正确，'+
           '我出现的原因是我在webpack中进行了配置，后缀是html的文件需要使用loader导致的，删除了就可以了'
         },
+        {
+          name: '使用element-ui的时候，有的样式需要修改，怎么做', 
+          question: '使用element-ui的时候，有的样式需要修改，怎么做',
+          answer:'如果就一个页面使用了这个组件或者说所有使用改组件的样式都是改成一样的，那就可以直接在app.vue中进行修改<br>'+
+          '如果使用该组件的页面较多，而且样式不一样，有两种方式解决，1.在app.vue页面进行修改，可以加上一个class名，用于区分页面'+
+          '2.可以在当前页面的有scope的style下，再写一个style，用于样式的修改，https://vue-loader-v14.vuejs.org/zh-cn/features/scoped-css.html'+
+          '<style>/* 全局样式 */</style>//////////////<br><style scoped>/* 本地样式 */</style><br>深度作用选择器<style scoped>'+
+          '.a >>> .b { /* ... */ }</style>有些像 Sass 之类的预处理器无法正确解析 >>>。这种情况下你可以使用 /deep/ 操作符取而代之——这是一个 >>> 的别名，同样可以正常工作。'
+        },
+
       ],
     }
   },

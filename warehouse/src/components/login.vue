@@ -9,8 +9,8 @@
       methods:{
         jump(){
           this.$router.push({  
-            path: '/Home',
-            name: 'Home' 
+            path: '/EchartStudy',
+            name: 'EchartStudy' 
           })
         }
       }

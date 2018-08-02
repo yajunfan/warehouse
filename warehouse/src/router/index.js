@@ -43,103 +43,103 @@ export default new Router({
           component: EchartStudy
         },
         {
-          path: '/EchartStudy',
+          path: '/Home/EchartStudy',
           name: 'EchartStudy',
           component: EchartStudy
         },
         {
-          path: '/D3Study',
+          path: '/Home/D3Study',
           name: 'D3Study',
           component: D3Study
         },
         {
-          path: '/G6Study',
+          path: '/Home/G6Study',
           name: 'G6Study',
           component: G6Study
         },
         {
-          path: '/EchartQuestion',
+          path: '/Home/EchartQuestion',
           name: 'EchartQuestion',
           component: EchartQuestion
         },
         {
-          path: '/CSSQuestion',
+          path: '/Home/CSSQuestion',
           name: 'CSSQuestion',
           component: CSSQuestion
         },
         {
-          path: '/HtmlQuestion',
+          path: '/Home/HtmlQuestion',
           name: 'HtmlQuestion',
           component: HtmlQuestion
         },
         {
-          path: '/VueQuestion',
+          path: '/Home/VueQuestion',
           name: 'VueQuestion',
           component: VueQuestion
         },
         {
-          path: '/ArborKnowledge',
+          path: '/Home/ArborKnowledge',
           name: 'ArborKnowledge',
           component: ArborKnowledge
         },
         {
-          path: '/BaiMapKnowledge',
+          path: '/Home/BaiMapKnowledge',
           name: 'BaiMapKnowledge',
           component: BaiMapKnowledge
         },
         {
-          path: '/RequireKnowledge',
+          path: '/Home/RequireKnowledge',
           name: 'RequireKnowledge',
           component: RequireKnowledge
         },
         {
-          path: '/CanvasKnowledge',
+          path: '/Home/CanvasKnowledge',
           name: 'CanvasKnowledge',
           component: CanvasKnowledge
         },
         
         {
-          path: '/Css3Knowledge',
+          path: '/Home/Css3Knowledge',
           name: 'Css3Knowledge',
           component: Css3Knowledge
         },
         {
-          path: '/NgGridKnowledge',
+          path: '/Home/NgGridKnowledge',
           name: 'NgGridKnowledge',
           component: NgGridKnowledge
         },
         {
-          path: '/WebpackKnowledge',
+          path: '/Home/WebpackKnowledge',
           name: 'WebpackKnowledge',
           component: WebpackKnowledge
         },
         {
-          path: '/RelationEm',
+          path: '/Home/RelationEm',
           name: 'RelationEm',
           component: RelationEm
         },
         {
-          path: '/StarEm',
+          path: '/Home/StarEm',
           name: 'StarEm',
           component: StarEm
         },
         {
-          path: '/FlowChartEm',
+          path: '/Home/FlowChartEm',
           name: 'FlowChartEm',
           component: FlowChartEm
         },
         {
-          path: '/MobileInterview',
+          path: '/Home/MobileInterview',
           name: 'MobileInterview',
           component: MobileInterview
         },
         {
-          path: '/FEInterview',
+          path: '/Home/FEInterview',
           name: 'FEInterview',
           component: FEInterview
         },
         {
-          path: '/FrameworkInterview',
+          path: '/Home/FrameworkInterview',
           name: 'FrameworkInterview',
           component: FrameworkInterview
         },
