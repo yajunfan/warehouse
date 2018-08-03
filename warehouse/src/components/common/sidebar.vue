@@ -38,6 +38,7 @@
               <el-menu-item index="MobileInterview">移动端知识</el-menu-item>
               <el-menu-item index="FEInterview">前端基础</el-menu-item>
               <el-menu-item index="FrameworkInterview">框架问题</el-menu-item>
+              <el-menu-item index="Interviewdot">面试要求总结</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>

@@ -49,6 +49,61 @@ export default{
       }); 
       return  aryCommon;
     },
-    //统计一个字符串出现最多的字母,并且出现了多少次
+    //获取字符串中出现最多的字母并且出现的次数
+    /**
+     *注意的是对象的循环，在for in循环中，obj.key指的是添加一个key的属性值，而不会获取到key的值
+     *使用obj[key]
+     * @param {*} str 需要进行计算的字符串
+     * @returns 返回获取到的字母和次数
+     */
+    stringnum(str){
+      var ary=str.split("");
+      //首先将目前有的集中可能放在对象中保存
+      var obj={};
+      ary.forEach((item,index)=>{
+        obj[item] = 0;
+      });
+      //进行循环，通过原数组比较，相同的字母进行累加
+      
+      for(var i=0;i<ary.length;i++){
+        var item = ary[i];
+        for(var key in obj){
+          if(key == item){
+            obj[key]++;
+          }
+        }
+      };
+      //对新的对象进行循环，获取到出现频率最高并且出现的次数
+      var n=0,objbiger={};
+      for(var key in obj){
+        if(n<obj[key]){
+          n = obj[key]
+          objbiger={"name":[key],"num":n};
+        }
+      };
+      return objbiger;
+    },
+    //冒泡排序
+    /**
+     *两两进行比较，因为比较到最后，不需要和后面的再进行比较，因为自己本身就是最后一个
+     *
+     * @param {*} ary 需要进行排序的数组，可以是数字数组，也可以是字母数组，
+     * @returns
+     */
+    bubblesort(ary){
+      for(var i=0;i<ary.length-1;i++){
+        for(var j=0;j<ary.length-1-i;j++){
+           var itemF=ary[j];
+           var itemA=ary[j+1];
+           if(itemF>itemA){
+             var temp = itemF;
+             ary[j]= itemA;
+             ary[j+1] = temp;
+           }
+        }
+      }
+      return ary;
+    }
+
   }
 }

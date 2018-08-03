@@ -23,6 +23,7 @@ import FlowChartEm from '@/components/example/FlowChartEm'
 import MobileInterview from '@/components/interview/MobileInterview'
 import FEInterview from '@/components/interview/FEInterview'
 import FrameworkInterview from '@/components/interview/FrameworkInterview'
+import Interviewdot from '@/components/interview/Interviewdot'
 
 
 Vue.use(Router)
@@ -149,6 +150,11 @@ export default new Router({
           path: '/Home/FrameworkInterview',
           name: 'FrameworkInterview',
           component: FrameworkInterview
+        },
+        {
+          path: '/Home/Interviewdot',
+          name: 'Interviewdot',
+          component: Interviewdot
         },
         
       ]
