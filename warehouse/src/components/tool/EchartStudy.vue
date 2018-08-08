@@ -51,6 +51,11 @@ export default {
           " 值域边框线宽splitNumber: 5, // 分割段数，默认为5，为0时为线性渐变,<br>其他的属性和图例一样<br>3）toolbox: {和图例一样，，不一样的是增加了itemGap: 10, // 各个item之间的间隔，"+
           " featureImageIcon : {},featureTitle : { mark : '辅助线开关',// 自定义图片icon，markUndo : '删除辅助线',markClear : '清空辅助线'，dataZoom : '区域缩放',dataZoomReset : '区域缩放后退',<br>"+
           "dataView : '数据视图',lineChart : '折线图切换',barChart : '柱形图切换',restore : '还原', saveAsImage : '保存为图片'", 
+        },
+        {
+          title:"echarts实现地图上的散点",
+          content1:'http://echarts.baidu.com/option.html#series-scatter',
+          content2:"关键词，geo和scatter；在散点图上显示名称在geo{->label:{show:true}}}", 
         }
       ]
     }

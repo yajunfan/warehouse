@@ -243,6 +243,13 @@ export default {
               +" onclick: function (){this_.searchback(); } };"
               +"但是没有onmouseover 的方法，有click的方法",
         answer: "http://echarts.baidu.com/option.html#toolbox.feature",
+      },
+      {
+        id: '18',
+        num:1,
+        name: 'echarts实现地图散点图',
+        question: "不写例子了，直接放上网址",
+        answer: "http://echarts.baidu.com/option.html#series-scatter，在散点图上显示名称在geo{->label:{show:true}}}",
       }]
     }
   },

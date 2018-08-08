@@ -103,6 +103,49 @@ export default{
         }
       }
       return ary;
+    },
+    //快速排序
+    /**
+     *快速排序，主要使用那个递归，将一个数组中的一个值取出，让数组中的每一个与它进行比较，比他大的放在右边的数组中，比他小的放在左边的数组中，
+     * 然后将获取到的左右再次进行分左右，知道左右两边的数组都是只剩一个的时候，进行拼接左中右数组
+     * @param {*} ary 要排序的数组
+     * @returns  返回拍好的数组
+     */
+    quicksort(ary){
+      var leftary=[],rightary=[],middleary=[],num=ary[0];
+      if(ary.length<1){
+        return ary;
+      }
+      for(var i=0;i<ary.length;i++){
+        var item = ary[i];
+        if(item>num){
+          rightary.push(item);
+        }else if(item<num){
+          leftary.push(item);
+        }else {
+          middleary.push(item);
+        }
+      }
+      var aryback=quick(leftary).concat(middleary).concat(quick(rightary));
+      return aryback;
+    },
+    //找到一串正整数的最大的差值
+    /**
+     *通过不停的赋值，比较当前的上次的较小值获取到更小的那个值，然后将当前值和较小的值得到结果
+     *
+     * @param {*} ary
+     * @returns
+     */
+    getMax(ary){
+      var minnum = ary[0];
+      var maxnum = 0;
+      for(var i=0;i<ary.length;i++){
+        var item = ary[i];
+        minnum = Math.min(item,minnum);
+        var value = item - minnum;
+        maxnum = Math.max(maxnum,value);
+      }
+      return  maxnum;
     }
 
   }

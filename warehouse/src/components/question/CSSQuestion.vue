@@ -8,6 +8,17 @@
         </div>
       </el-collapse-item>
     </el-collapse>
+    <h4>由图片1，变成图片2，使用flex布局，怎么实现</h4>
+    <div class="example">
+      <img src="../../assets/1.png" alt="">
+      <p>
+        flex-flow:column-reverse wrap-reverse;<br>
+        align-content:space-between;<br>
+        justify-content:center;<br>
+      </p>
+      <img src="../../assets/2.png" alt="">
+    </div>
+    <img src="../../assets/3.png" alt="" title="flex的属性大全">
   </div>
 </template>
 
@@ -65,7 +76,21 @@
          },
          {
            title:"给一个网站的标题前面添加小图标",
-           content1:'1.网上制作一个favicon.ico图标，把它放到根目录下(以前是放在根目录下)<br>2.在把(link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/)添加到head里面',
+           content1:'1.网上制作一个favicon.ico图标，把它放到不是根目录的目录下(以前是放在根目录下)<br>2.在把(link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/)添加到head里面',
+         },
+         {
+           title:"关于height:inherit",
+           content1:'这个属性在一般情况下是和height:100%，一样的，但是当父元素没有定位，有固定高度的时候，子元素有定位的情况下，子元素写了height：100%,那么'+
+           '子元素是会继承body或者是他的最终一个定位的父级的高度，而使用了height:inherit;的元素，就会始终都继承自己当前的父元素的高度',
+         },
+         {
+           title:"关于text-align: center、verticle-align: center",
+           content1:'这两个属性是只能用于行内元素，对于块级元素的布局是无效的，',
+         },
+          {
+           title:"使用flex进行布局",
+           content1:'父容器可以进行统一的设置子容器的排列方式，子容器也可以单独设置自身的排列方式，如果两者都设置了，以子为准，比如align-items是设置父容器的'+
+           'align-self是设置子容器的，juqtify-content是负责主轴的，align-items负责交叉轴，主轴交叉轴又是根据flex-director这个属性的值来进行相应的变化',
          }
        ]
      }
@@ -74,5 +99,23 @@
 </script>
 
 <style scoped lang="scss" type="text/css">
-
+h4{
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  text-align: center;
+}
+.example{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 300px;
+  img{
+    width: 30%;
+    height: inherit;
+  }
+  p{
+    font-size: 16px;
+  }
+}
 </style>
